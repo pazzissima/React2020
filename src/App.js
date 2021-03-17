@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
+import UserInput from './UserInput/UserInput';
+import UserOutput from './UserOutput/UserOutput';
 
 class App extends Component {
   state = {
@@ -65,6 +67,10 @@ class App extends Component {
           click={this.switchNameHandler.bind(this, 'Tengoooo')}>Hobbies: racing
         </Person>
         <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
+
+        <UserInput/>
+        <UserOutput/>
+        <UserOutput/>
       </div>
     );
     //return React.createElement('div', {className: 'App'}, React.createElement('h1', null, "Hello World"))

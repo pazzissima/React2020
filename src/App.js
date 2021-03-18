@@ -24,7 +24,7 @@ class App extends Component {
         </div>
 
 
-        <UserInput changed={this.usernameChangedHandler}/>
+        <UserInput changed={this.usernameChangedHandler} currentName={this.state.username}/>
         <UserOutput userName={this.state.username} />
         <UserOutput userName={this.state.username}/>
         <UserOutput userName="James Bond"/>

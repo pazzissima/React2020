@@ -14,27 +14,6 @@ class App extends Component {
     ]
   }
 
-  switchNameHandler = (newName) => {
-    //console.log("Was clicked!")
-    this.setState( {
-      persons: [
-        {name: newName, age: 40},
-        {name: "Zu", age: 45},
-        {name: "Sonechka", age: 36}
-      ]
-    })
-  }
-
-  nameChangedHandler =(event) => {
-    this.setState( {
-      persons: [
-        {name: "Teng", age: 39},
-        {name: event.target.value, age: 38},
-        {name: "Sonechka", age: 36}
-      ],
-      showPersons: false
-    })
-  }
 
   togglePersonsHandler = () => {
     const doesShow = this.state.showPersons;
@@ -54,14 +33,9 @@ class App extends Component {
     if(this.state.showPersons){
       persons = (
         <div>
-          <Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
-          <Person 
-            name={this.state.persons[1].name} 
-            age={this.state.persons[1].age} 
-            changed={this.nameChangedHandler}
-            click={this.switchNameHandler.bind(this, 'Tengoooo')}>Hobbies: racing
-          </Person>
-          <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
+          {this.state.persons.map(person => {
+            return <Person name={person.name} age={person.age}/>
+          })}
         </div>
       )
     }

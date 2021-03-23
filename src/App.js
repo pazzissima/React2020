@@ -8,9 +8,9 @@ import UserOutput from './UserOutput/UserOutput';
 class App extends Component {
   state = {
     persons: [
-      {name: "Teng", age: 39},
-      {name: "Zurab", age: 38},
-      {name: "Sonya", age: 36}
+      {id: "jkgd", name: "Teng", age: 39},
+      {id: "okfhe", name: "Zurab", age: 38},
+      {id: "adhw", name: "Sonya", age: 36}
     ]
   }
 
@@ -44,7 +44,8 @@ class App extends Component {
             return <Person 
               click={() => this.deletePersonHandler(index)}
               name={person.name} 
-              age={person.age} />
+              age={person.age} 
+              key={person.id}/>
           })}
         </div>
       )

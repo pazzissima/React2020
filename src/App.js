@@ -79,6 +79,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>My 2020 React Kingdom</h2>
+          <p>This is working</p>
         </div>
         <p className="App-intro">
           Muahahahaha!

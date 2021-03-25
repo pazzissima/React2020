@@ -47,7 +47,7 @@ class App extends Component {
 
   render() {
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
       font: 'inherit',
       border: '1px solid blue',
       padding: '4px',
@@ -64,11 +64,13 @@ class App extends Component {
               name={person.name} 
               age={person.age} 
               key={person.id}
-              changed={(event) => this.nameChangedHandler(event, person.id)}/>
+              changed={(event) => this.nameChangedHandler(event, person.id)} />
           })}
         </div>
       )
-    }
+
+      style.backgroundColor = "red";
+    };
 
     return (
       <div className="App">

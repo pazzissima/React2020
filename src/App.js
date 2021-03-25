@@ -72,7 +72,13 @@ class App extends Component {
       style.backgroundColor = "red";
     };
 
-    let classes = ['red', 'bold'].join(' ');
+    let classes = [];
+    if (this.state.persons.length <= 2){
+      classes.push('red');
+    }
+    if (this.state.persons.length <= 1){
+      classes.push('bold');
+    }
 
     return (
       <div className="App">
@@ -81,7 +87,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>My 2020 React Kingdom</h2>
-          <p className={classes}>This is working</p>
+          <p className={classes.join(' ')}>This is working</p>
         </div>
         <p className="App-intro">
           Muahahahaha!

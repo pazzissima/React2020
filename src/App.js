@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
-import Radium from 'radium';
+import Radium, { StyleRoot } from 'radium';
 import UserInput from './UserInput/UserInput';
 import UserOutput from './UserOutput/UserOutput';
 
@@ -90,26 +90,27 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <StyleRoot>
+
+        <div className="App">
+          <div className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h2>My 2020 React Kingdom</h2>
+            <p className={classes.join(' ')}>This is working</p>
+          </div>
+          <p className="App-intro">
+            Muahahahaha!
+          </p>
+          
+          <button 
+            style={style}
+            onClick={this.togglePersonsHandler}>Switch name
+          </button>
+          {persons}
 
 
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>My 2020 React Kingdom</h2>
-          <p className={classes.join(' ')}>This is working</p>
         </div>
-        <p className="App-intro">
-          Muahahahaha!
-        </p>
-        
-        <button 
-          style={style}
-          onClick={this.togglePersonsHandler}>Switch name
-        </button>
-        {persons}
-
-
-      </div>
+      </StyleRoot>
     );
     //return React.createElement('div', {className: 'App'}, React.createElement('h1', null, "Hello World"))
   }

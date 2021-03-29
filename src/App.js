@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Person from './Person/Person';
-import Radium, { StyleRoot } from 'radium';
-import UserInput from './UserInput/UserInput';
-import UserOutput from './UserOutput/UserOutput';
+// import UserInput from './UserInput/UserInput';
+// import UserOutput from './UserOutput/UserOutput';
 
 class App extends Component {
   state = {
@@ -90,30 +89,29 @@ class App extends Component {
     }
 
     return (
-      <StyleRoot>
 
-        <div className="App">
-          <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>My 2020 React Kingdom</h2>
-            <p className={classes.join(' ')}>This is working</p>
-          </div>
-          <p className="App-intro">
-            Muahahahaha!
-          </p>
-          
-          <button 
-            style={style}
-            onClick={this.togglePersonsHandler}>Switch name
-          </button>
-          {persons}
-
-
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>My 2020 React Kingdom</h2>
+          <p className={classes.join(' ')}>This is working</p>
         </div>
-      </StyleRoot>
+        <p className="App-intro">
+          Muahahahaha!
+        </p>
+        
+        <button 
+          style={style}
+          onClick={this.togglePersonsHandler}>Switch name
+        </button>
+        {persons}
+
+
+      </div>
+
     );
     //return React.createElement('div', {className: 'App'}, React.createElement('h1', null, "Hello World"))
   }
 }
 
-export default Radium(App);
+export default App;

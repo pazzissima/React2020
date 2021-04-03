@@ -69,7 +69,7 @@ class App extends Component {
       persons = <PersonList 
             persons={this.state.persons} 
             clicked={this.deletePersonHandler}
-            change={this.nameChangedHandler} />
+            changed={this.nameChangedHandler} />
     }
 
 

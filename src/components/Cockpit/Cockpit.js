@@ -4,6 +4,7 @@ import classes from './Cockpit.css';
 const cockpit = (props) => {
 	useEffect(() => {
 		console.log('[Cockpit.js] useEffect');
+		//HTTP request...
 	});
 
 	const assignedClasses = [];
